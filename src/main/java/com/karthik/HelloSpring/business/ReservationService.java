@@ -61,5 +61,19 @@ public class ReservationService {
         guests.forEach(guest -> guestList.add(guest));
         return guestList;
     }
+
+    public void addGuest(Guest guest) {
+        if (guest == null) {
+            throw new RuntimeException("Invalid guest details");
+        }
+        this.guestRepository.save(guest);
+    }
+
+    public List<Room> getRooms() {
+        Iterable<Room> rooms = this.roomRepository.findAll();
+        List<Room> roomList = new ArrayList<>();
+        rooms.forEach(room -> roomList.add(room));
+        return roomList;
+    }
 }
 
