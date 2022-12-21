@@ -12,9 +12,7 @@ import java.util.List;
 @Controller
 @RequestMapping("/guests")
 public class GuestController {
-
     private final ReservationService reservationService;
-
     public GuestController(ReservationService reservationService) {
         this.reservationService = reservationService;
     }

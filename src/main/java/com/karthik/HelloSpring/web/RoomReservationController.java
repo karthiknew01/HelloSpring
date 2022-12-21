@@ -15,7 +15,6 @@ import java.util.List;
 @Controller
 @RequestMapping("/reservations")
 public class RoomReservationController {
-
     private final DateUtils dateUtils;
     private final ReservationService reservationService;
 
